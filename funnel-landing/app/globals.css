@@ -141,10 +141,28 @@ button, input{font:inherit}
 
 .hSub{
   margin:16px 0 0;
-  max-width: 52ch;
+  max-width: 58ch;
   color: var(--muted);
   font-size: 17px;
   line-height:1.55;
+}
+
+.hProof{
+  margin: 14px 0 0;
+  max-width: 48ch;
+  color: var(--ink2);
+  font-size: clamp(17px, 2vw, 19px);
+  line-height: 1.45;
+  font-weight: 500;
+  padding: 12px 0 12px 16px;
+  border-left: 3px solid var(--accent);
+  letter-spacing: 0.01em;
+}
+
+.hProofNum{
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .ctaRow{
@@ -236,6 +254,76 @@ button, input{font:inherit}
 
 .cardInner{ padding: 20px; }
 
+.cardMember{
+  border-color: rgba(15,91,74,.22);
+  background:
+    linear-gradient(165deg, rgba(15,91,74,.09), rgba(255,255,255,.48));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.55), var(--shadow2);
+}
+
+.memberTeaser{
+  margin: 10px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(18,17,15,.78);
+}
+
+.funnelSteps{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.funnelSteps li{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: start;
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(18,17,15,.75);
+}
+.funnelStepsMark{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: rgba(15,91,74,.12);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.sectionHeroMembership{
+  padding: 36px 0 0;
+}
+
+.membershipPageTitle{
+  max-width: 22ch;
+}
+
+.membershipLead{
+  margin: 14px 0 0;
+  max-width: 62ch;
+  color: rgba(18,17,15,.72);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.membershipFunnelNote{
+  margin: 16px 0 0;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(18,17,15,.16);
+  font-size: 14px;
+  color: rgba(18,17,15,.7);
+  line-height: 1.55;
+}
+
 .twoCol{
   display:grid;
   grid-template-columns: 1.1fr .9fr;
@@ -255,6 +343,22 @@ button, input{font:inherit}
   padding-left: 18px;
   color: rgba(18,17,15,.72);
   line-height:1.7;
+}
+
+.listLead{
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink2);
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+}
+
+.bulletsConcrete li{
+  margin-bottom: 6px;
+}
+.bulletsConcrete li:last-child{
+  margin-bottom: 0;
 }
 
 .kpiGrid{
@@ -306,6 +410,66 @@ button, input{font:inherit}
   gap:10px;
   flex-wrap:wrap;
   align-items:center;
+}
+
+.subscribeWrap{
+  width:100%;
+}
+.subscribeWrapHero{
+  margin-top:2px;
+}
+
+.formHero{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  align-items:stretch;
+  width:100%;
+}
+.formHero .input{
+  flex:1 1 min(280px, 100%);
+  min-height:48px;
+  padding:12px 18px;
+  font-size:16px;
+}
+.formHero .btn{
+  flex:0 0 auto;
+  min-height:48px;
+  padding:12px 20px;
+}
+@media (min-width: 520px){
+  .formHero{
+    flex-wrap:nowrap;
+  }
+  .formHero .input{
+    flex:1 1 auto;
+    min-width:0;
+  }
+}
+
+.heroCta{
+  margin-top:22px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  width:100%;
+  max-width:640px;
+}
+.heroCtaSecondary{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  align-items:center;
+}
+
+.btnGhost{
+  border:1px dashed rgba(18,17,15,.28);
+  background:transparent;
+  box-shadow:none;
+}
+.btnGhost:hover{
+  background:rgba(251,247,238,.55);
+  border-style:solid;
 }
 .input{
   flex: 1 1 240px;

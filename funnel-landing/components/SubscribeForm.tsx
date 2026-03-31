@@ -8,12 +8,24 @@ function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
 }
 
-export default function SubscribeForm() {
+type SubscribeFormProps = {
+  variant?: "default" | "hero";
+  /** Unique id for the email input when multiple forms exist on one page */
+  inputId?: string;
+};
+
+export default function SubscribeForm({
+  variant = "default",
+  inputId,
+}: SubscribeFormProps) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState<string | null>(null);
   const [hp, setHp] = useState("");
   const [startedAt] = useState(() => Date.now());
+
+  const resolvedInputId =
+    inputId ?? (variant === "hero" ? "hero-email" : "free-email");
 
   const canSubmit = useMemo(() => {
     if (status === "loading") return false;
@@ -74,8 +86,11 @@ export default function SubscribeForm() {
   }
 
   return (
-    <div>
-      <form className="form" onSubmit={onSubmit}>
+    <div className={variant === "hero" ? "subscribeWrap subscribeWrapHero" : "subscribeWrap"}>
+      <form
+        className={variant === "hero" ? "form formHero" : "form"}
+        onSubmit={onSubmit}
+      >
         <div style={{ position: "absolute", left: -9999, top: "auto" }} aria-hidden="true">
           <label>
             Company
@@ -90,6 +105,7 @@ export default function SubscribeForm() {
         </div>
 
         <input
+          id={resolvedInputId}
           className="input"
           type="email"
           inputMode="email"

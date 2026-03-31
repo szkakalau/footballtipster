@@ -71,12 +71,14 @@ export default function Home() {
         <div className="card">
           <div className="cardInner">
             <div className="twoCol">
-              <ul className="bullets">
-                <li>Weekly picks newsletter</li>
-                <li>Data insights</li>
-                <li>Match breakdowns</li>
-                <li>Performance tracking</li>
-              </ul>
+              <div>
+                <p className="listLead">Every week you&apos;ll receive:</p>
+                <ul className="bullets bulletsConcrete">
+                  <li>3–5 football picks</li>
+                  <li>Short match breakdowns</li>
+                  <li>Performance update</li>
+                </ul>
+              </div>
               <div>
                 <div className="sEyebrow">Get Free Picks</div>
                 <div style={{ marginTop: 10 }}>
@@ -117,20 +119,34 @@ export default function Home() {
       </Section>
 
       <Section
-        id="support"
-        eyebrow="Optional"
-        title="Some members choose to support the project"
+        id="membership"
+        eyebrow="Membership"
+        title="After the free email: the full experiment"
         rightSlot={
-          <div className="card">
+          <div className="card cardMember">
             <div className="cardInner">
-              <div className="sEyebrow">Support</div>
-              <div className="prose" style={{ marginTop: 10 }}>
-                Support helps keep the tracking infrastructure running and
-                unlocks full daily picks.
-              </div>
-              <div className="ctaRow" style={{ marginTop: 14 }}>
-                <a className="btn" href="#free" aria-label="Learn about membership">
-                  <span>Learn about membership</span>
+              <div className="sEyebrow">Member value</div>
+              <p className="memberTeaser">
+                Paid members fund the tracking stack and get everything we
+                publish — <strong>full daily picks</strong>, not just the weekly
+                free digest.
+              </p>
+              <p className="listLead" style={{ marginTop: 14 }}>
+                You upgrade when you want:
+              </p>
+              <ul className="bullets bulletsConcrete">
+                <li>Every pick, every day</li>
+                <li>Richer match notes &amp; edge cases</li>
+                <li>Member-only performance views</li>
+              </ul>
+              <div className="ctaRow" style={{ marginTop: 16 }}>
+                <a
+                  className="btn btnPrimary"
+                  href="/membership"
+                  aria-label="Open membership page with benefits and entry"
+                >
+                  <span className="btnIcon" aria-hidden="true" />
+                  <span>Membership &amp; pricing</span>
                 </a>
               </div>
             </div>
@@ -139,15 +155,51 @@ export default function Home() {
       >
         <div className="card">
           <div className="cardInner">
-            <div className="prose">
-              <p>
-                The newsletter is free. If you like the work, you&apos;ll see an
-                optional support link inside the weekly email.
-              </p>
-              <p>
-                This page is just the public research log and the free weekly
-                picks.
-              </p>
+            <div className="twoCol">
+              <div>
+                <p className="listLead">The funnel we actually run</p>
+                <ol className="funnelSteps">
+                  <li>
+                    <span className="funnelStepsMark">1</span>
+                    <span>
+                      You join the <strong>free</strong> weekly email — 3–5
+                      picks, short notes, performance snapshot.
+                    </span>
+                  </li>
+                  <li>
+                    <span className="funnelStepsMark">2</span>
+                    <span>
+                      If the research fits how you bet, you&apos;ll see a{" "}
+                      <strong>member link</strong> in the same newsletter.
+                    </span>
+                  </li>
+                  <li>
+                    <span className="funnelStepsMark">3</span>
+                    <span>
+                      <strong>Members</strong> unlock full daily picks, deeper
+                      breakdowns, and the full tracking layer.
+                    </span>
+                  </li>
+                </ol>
+              </div>
+              <div>
+                <div className="prose">
+                  <p>
+                    We don&apos;t hide that there&apos;s a paid tier. The free
+                    letter is the on-ramp; membership is for people who want the
+                    complete signal.
+                  </p>
+                  <p>
+                    No pressure in the signup flow — but you should know what
+                    comes next.
+                  </p>
+                </div>
+                <div className="ctaRow" style={{ marginTop: 8 }}>
+                  <a className="btn btnPrimary" href="/membership">
+                    <span>See what members get</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import SubscribeForm from "@/components/SubscribeForm";
+
 export default function Hero() {
   return (
     <section className="hero">
@@ -10,16 +12,22 @@ export default function Hero() {
               <br />
               A football data experiment.
             </h1>
-            <p className="hSub">Get our weekly picks &amp; research free.</p>
+            <p className="hSub">
+              Get our weekly picks &amp; research free — we only use your email
+              to send one weekly digest: picks, research, and model notes.
+            </p>
+            <p className="hProof">
+              Join <span className="hProofNum">3,200</span> subscribers receiving
+              weekly football picks.
+            </p>
 
-            <div className="ctaRow">
-              <a className="btn btnPrimary" href="#free" aria-label="Get Free Picks">
-                <span className="btnIcon" aria-hidden="true" />
-                <span>Get Free Picks</span>
-              </a>
-              <a className="btn" href="#performance" aria-label="View model performance">
-                <span>Model Performance</span>
-              </a>
+            <div className="heroCta">
+              <SubscribeForm variant="hero" />
+              <div className="heroCtaSecondary">
+                <a className="btn btnGhost" href="#performance" aria-label="View model performance">
+                  <span>Model Performance</span>
+                </a>
+              </div>
             </div>
 
             <div className="note">
