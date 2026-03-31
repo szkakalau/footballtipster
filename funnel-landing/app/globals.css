@@ -402,7 +402,7 @@ button, input{font:inherit}
   margin-top: 10px;
   font-size: 12px;
   color: rgba(18,17,15,.64);
-  line-height:1.4;
+  line-height:1.45;
 }
 
 .form{
@@ -626,6 +626,283 @@ button, input{font:inherit}
 .proofOutcomePush{
   background: rgba(18,17,15,.08);
   color: rgba(18,17,15,.62);
+}
+
+.hForever{
+  margin: 14px 0 0;
+  max-width: 58ch;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(18,17,15,.72);
+}
+.hForever strong{
+  color: var(--ink2);
+}
+
+.examplePicksLead{
+  margin: 0 0 18px;
+  max-width: 62ch;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(18,17,15,.78);
+}
+.examplePicksLead a{
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.examplePicksGrid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 720px){
+  .examplePicksGrid{
+    grid-template-columns: 1fr;
+  }
+}
+
+.examplePickCard{
+  border: 1px solid rgba(18,17,15,.14);
+  border-radius: var(--radius2);
+  padding: 14px 14px 12px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.65), rgba(246,241,228,.4));
+  box-shadow: 0 8px 22px rgba(18,17,15,.08);
+  opacity: 0;
+  animation: exampleRise .5s ease forwards;
+}
+.examplePickCard:nth-child(1){ animation-delay: .04s; }
+.examplePickCard:nth-child(2){ animation-delay: .1s; }
+.examplePickCard:nth-child(3){ animation-delay: .16s; }
+.examplePickCard:nth-child(4){ animation-delay: .22s; }
+
+@keyframes exampleRise{
+  from{
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .examplePickCard{
+    animation: none;
+    opacity: 1;
+  }
+}
+
+.examplePickTop{
+  display:flex;
+  flex-wrap:wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed rgba(18,17,15,.18);
+}
+.examplePickFixture{
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink2);
+  letter-spacing: -0.02em;
+}
+.examplePickEdge{
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.examplePickDl{
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+.examplePickDl > div{
+  display:grid;
+  grid-template-columns: 72px 1fr;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.examplePickDl dt{
+  margin: 0;
+  color: rgba(18,17,15,.52);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.examplePickDl dd{
+  margin: 0;
+  color: var(--ink2);
+}
+
+.emailMock{
+  max-width: 720px;
+}
+.emailMockChrome{
+  display:flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border: 1px solid rgba(18,17,15,.18);
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  background: rgba(18,17,15,.06);
+}
+.emailMockDots{
+  display:flex;
+  gap: 6px;
+}
+.emailMockDots span{
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: rgba(18,17,15,.22);
+}
+.emailMockDots span:nth-child(1){ background: rgba(138,43,43,.45); }
+.emailMockDots span:nth-child(2){ background: rgba(18,17,15,.28); }
+.emailMockDots span:nth-child(3){ background: rgba(15,91,74,.35); }
+.emailMockTitle{
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(18,17,15,.55);
+}
+
+.emailMockPaper{
+  border: 1px solid rgba(18,17,15,.18);
+  border-radius: 0 0 14px 14px;
+  background: rgba(255,255,255,.72);
+  box-shadow: var(--shadow2);
+  overflow: hidden;
+}
+
+.emailMockHeader{
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid rgba(18,17,15,.1);
+  background:
+    linear-gradient(180deg, rgba(15,91,74,.06), transparent);
+}
+.emailMockSubject{
+  margin: 0;
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.2;
+  color: var(--ink2);
+}
+.emailMockMeta{
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: rgba(18,17,15,.58);
+  letter-spacing: .04em;
+}
+
+.emailMockBody{
+  padding: 16px 20px 8px;
+}
+.emailMockSection{
+  margin-bottom: 16px;
+}
+.emailMockH{
+  margin: 0 0 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: rgba(18,17,15,.55);
+}
+.emailMockList{
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(18,17,15,.78);
+  font-size: 14px;
+  line-height: 1.55;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.emailMockP{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(18,17,15,.76);
+}
+.emailMockSectionAccent{
+  border: 1px dashed rgba(15,91,74,.28);
+  border-radius: var(--radius2);
+  padding: 12px 14px;
+  background: rgba(15,91,74,.05);
+}
+
+.emailMockFooter{
+  padding: 12px 20px 16px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: rgba(18,17,15,.55);
+  border-top: 1px solid rgba(18,17,15,.1);
+  background: rgba(246,241,228,.45);
+}
+
+.founderVoice{
+  border-radius: calc(var(--radius) + 4px);
+  border: 1px solid rgba(18,17,15,.14);
+  background:
+    linear-gradient(118deg, rgba(138,43,43,.06), rgba(255,255,255,.5)),
+    linear-gradient(180deg, rgba(246,241,228,.9), rgba(255,255,255,.4));
+  box-shadow: var(--shadow2);
+  position: relative;
+  overflow: hidden;
+}
+.founderVoice::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--accent2), var(--accent));
+  opacity: .85;
+}
+.founderVoiceInner{
+  padding: 26px 24px 26px 28px;
+}
+.founderVoiceEyebrow{
+  margin: 0;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: rgba(18,17,15,.52);
+}
+.founderQuote{
+  margin: 12px 0 0;
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-size: clamp(20px, 2.6vw, 26px);
+  line-height: 1.28;
+  color: var(--ink2);
+  font-weight: 400;
+}
+.founderVoiceNote{
+  margin: 14px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(18,17,15,.72);
+  max-width: 58ch;
+}
+.founderVoiceLink{
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(15,91,74,.25);
+}
+.founderVoiceLink:hover{
+  border-bottom-color: var(--accent);
 }
 
 @media (max-width: 900px){

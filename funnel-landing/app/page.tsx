@@ -1,3 +1,6 @@
+import EmailPreviewMock from "@/components/EmailPreviewMock";
+import ExamplePicks from "@/components/ExamplePicks";
+import FounderVoice from "@/components/FounderVoice";
 import Hero from "@/components/Hero";
 import PerformancePanel from "@/components/PerformancePanel";
 import Section from "@/components/Section";
@@ -7,6 +10,70 @@ export default function Home() {
   return (
     <main>
       <Hero />
+
+      <Section
+        id="examples"
+        eyebrow="Sample"
+        title="Example from a recent send"
+        rightSlot={
+          <div className="card">
+            <div className="cardInner">
+              <div className="sEyebrow">Why this exists</div>
+              <p className="prose" style={{ marginTop: 10 }}>
+                Cold traffic won&apos;t subscribe to an abstraction. Show the
+                artefact: fixture, price, closing line, settlement — same fields
+                as the{" "}
+                <a href="/picks-history" className="founderVoiceLink">
+                  full history
+                </a>
+                .
+              </p>
+            </div>
+          </div>
+        }
+      >
+        <ExamplePicks />
+      </Section>
+
+      <Section
+        id="email-preview"
+        eyebrow="Inbox"
+        title="What the emails look like"
+        rightSlot={
+          <div className="card">
+            <div className="cardInner">
+              <div className="sEyebrow">Newsletter = product</div>
+              <p className="prose" style={{ marginTop: 10 }}>
+                If people can&apos;t picture the email, they won&apos;t opt in.
+                Below is a stylised preview — not a live screenshot, but the
+                real sections every issue includes.
+              </p>
+            </div>
+          </div>
+        }
+      >
+        <EmailPreviewMock />
+      </Section>
+
+      <Section
+        id="founder"
+        eyebrow="People"
+        title="Founder voice — not a faceless feed"
+        rightSlot={
+          <div className="card">
+            <div className="cardInner">
+              <div className="sEyebrow">Trust stack</div>
+              <p className="prose" style={{ marginTop: 10 }}>
+                Tipster sites default to anonymous brands. We lead with a human
+                stance so you know there&apos;s judgement behind the model — not
+                a random API.
+              </p>
+            </div>
+          </div>
+        }
+      >
+        <FounderVoice />
+      </Section>
 
       <Section
         id="why"
@@ -140,8 +207,9 @@ export default function Home() {
                   <SubscribeForm />
                 </div>
                 <div className="status" style={{ opacity: 0.85 }}>
-                  No hype. Just a weekly research note you can read in 3–5
-                  minutes.
+                  <strong>Free forever newsletter</strong> — one message per week,
+                  3–5 minutes. We never gate the digest behind payment; optional
+                  membership is a separate lane.
                 </div>
               </div>
             </div>

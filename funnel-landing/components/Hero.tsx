@@ -20,10 +20,18 @@ export default function Hero() {
               Join <span className="hProofNum">3,200</span> subscribers receiving
               weekly football picks.
             </p>
+            <p className="hForever">
+              The weekly digest is <strong>free forever</strong>. Paid membership
+              is optional — we may mention it in the letter, but the newsletter
+              itself is never paywalled.
+            </p>
 
             <div className="heroCta">
               <SubscribeForm variant="hero" />
               <div className="heroCtaSecondary">
+                <a className="btn btnGhost" href="#examples" aria-label="See example picks">
+                  <span>Example picks</span>
+                </a>
                 <a className="btn btnGhost" href="/picks-history" aria-label="View dated pick history">
                   <span>Pick history</span>
                 </a>
@@ -34,9 +42,9 @@ export default function Hero() {
             </div>
 
             <div className="note">
+              <span className="noteTag">Free forever</span>
               <span className="noteTag">Weekly email</span>
-              <span className="noteTag">Tracking-first</span>
-              <span className="noteTag">Research tone</span>
+              <span className="noteTag">Sample picks below</span>
               <span className="noteTag">No hype</span>
             </div>
           </div>

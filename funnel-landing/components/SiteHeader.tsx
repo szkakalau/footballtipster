@@ -9,6 +9,8 @@ export default function SiteHeader() {
           <span>Independent research project</span>
         </Link>
         <nav className="siteNav" aria-label="Primary">
+          <Link href="/#examples">Samples</Link>
+          <Link href="/#email-preview">Email</Link>
           <Link href="/picks-history">Pick history</Link>
           <Link href="/#how">How it works</Link>
           <Link href="/about">About</Link>
