@@ -18,11 +18,10 @@ export default function Home() {
         rightSlot={
           <div className="card">
             <div className="cardInner">
-              <div className="sEyebrow">Why this exists</div>
+              <div className="sEyebrow">What you get</div>
               <p className="prose" style={{ marginTop: 10 }}>
-                Cold traffic won&apos;t subscribe to an abstraction. Show the
-                artefact: fixture, price, closing line, settlement — same fields
-                as the{" "}
+                A quick peek at the format: fixture, published odds, closing
+                odds, and how it settled — the same fields as the{" "}
                 <a href="/picks-history" className="founderVoiceLink">
                   full history
                 </a>
@@ -42,11 +41,11 @@ export default function Home() {
         rightSlot={
           <div className="card">
             <div className="cardInner">
-              <div className="sEyebrow">Newsletter = product</div>
+              <div className="sEyebrow">Preview</div>
               <p className="prose" style={{ marginTop: 10 }}>
-                If people can&apos;t picture the email, they won&apos;t opt in.
-                Below is a stylised preview — not a live screenshot, but the
-                real sections every issue includes.
+                One email per week. Picks + short notes + a simple performance
+                snapshot — so you can scan it fast and decide if it&apos;s worth
+                your attention.
               </p>
             </div>
           </div>
@@ -62,11 +61,11 @@ export default function Home() {
         rightSlot={
           <div className="card">
             <div className="cardInner">
-              <div className="sEyebrow">Trust stack</div>
+              <div className="sEyebrow">A real person</div>
               <p className="prose" style={{ marginTop: 10 }}>
-                Tipster sites default to anonymous brands. We lead with a human
-                stance so you know there&apos;s judgement behind the model — not
-                a random API.
+                If you&apos;re skeptical, good. This is our stance in one
+                paragraph — and why we publish a public history instead of
+                hiding behind a brand.
               </p>
             </div>
           </div>
@@ -114,7 +113,7 @@ export default function Home() {
         rightSlot={
           <div className="card">
             <div className="cardInner">
-              <div className="sEyebrow">Reality check</div>
+              <div className="sEyebrow">In plain English</div>
               <p className="prose" style={{ marginTop: 10 }}>
                 &ldquo;AI&rdquo; here means statistical models trained on
                 historical prices and outcomes — not a random number generator.
@@ -241,12 +240,11 @@ export default function Home() {
         />
         <div className="card proofStackCard" style={{ marginTop: 14 }}>
           <div className="cardInner">
-            <p className="listLead">Proof stack — not just numbers on a slide</p>
+            <p className="listLead">Transparency — not just a headline number</p>
             <p className="prose" style={{ marginTop: 6 }}>
-              Aggregates are easy to doubt. A dated pick log with{" "}
-              <strong>fixture, price, and settlement</strong> is what turns
-              curiosity into trust — especially in a category full of
-              anonymous tipsters.
+              Summary stats are easy to argue about. The public pick log shows{" "}
+              <strong>the fixture, the published price, and the settlement</strong>
+              — so you can judge the work without taking our word for it.
             </p>
             <div className="ctaRow" style={{ marginTop: 12 }}>
               <a className="btn btnPrimary" href="/picks-history">
@@ -299,7 +297,7 @@ export default function Home() {
           <div className="cardInner">
             <div className="twoCol">
               <div>
-                <p className="listLead">The funnel we actually run</p>
+                <p className="listLead">What happens after you subscribe</p>
                 <ol className="funnelSteps">
                   <li>
                     <span className="funnelStepsMark">1</span>
@@ -311,8 +309,8 @@ export default function Home() {
                   <li>
                     <span className="funnelStepsMark">2</span>
                     <span>
-                      If the research fits how you bet, you&apos;ll see a{" "}
-                      <strong>member link</strong> in the same newsletter.
+                      If you like the style, you&apos;ll see an{" "}
+                      <strong>optional member link</strong> at the bottom.
                     </span>
                   </li>
                   <li>
@@ -327,13 +325,12 @@ export default function Home() {
               <div>
                 <div className="prose">
                   <p>
-                    We don&apos;t hide that there&apos;s a paid tier. The free
-                    letter is the on-ramp; membership is for people who want the
-                    complete signal.
+                    The free letter stays free. Membership is for people who
+                    want the complete signal: full daily picks + deeper notes.
                   </p>
                   <p>
-                    No pressure in the signup flow — but you should know what
-                    comes next.
+                    No surprise paywall, no bait-and-switch — you can ignore it
+                    forever and still get the weekly digest.
                   </p>
                 </div>
                 <div className="ctaRow" style={{ marginTop: 8 }}>

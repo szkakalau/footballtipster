@@ -26,7 +26,7 @@ export default function PerformancePanel({
             <div className="kpiValue">{clv}</div>
             <div className="kpiHint">
               +1.7% CLV means our recorded price often beats the closing number
-              — a sharpness check, not a bankroll forecast.
+              — a quality check, not a guarantee.
             </div>
           </div>
           <div className="kpi" role="listitem">

@@ -14,8 +14,8 @@ export default function ExamplePicks() {
   return (
     <div className="examplePicks">
       <p className="examplePicksLead">
-        This is the kind of line-item you get in the letter — not vibes, not
-        screenshots of a “hot streak.” Same structure as the{" "}
+        A real example of what you&apos;ll see in the weekly email. Same
+        structure as the{" "}
         <a href="/picks-history">public pick log</a>.
       </p>
       <div className="examplePicksGrid">
