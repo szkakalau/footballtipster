@@ -24,8 +24,11 @@ export default function Hero() {
             <div className="heroCta">
               <SubscribeForm variant="hero" />
               <div className="heroCtaSecondary">
+                <a className="btn btnGhost" href="/picks-history" aria-label="View dated pick history">
+                  <span>Pick history</span>
+                </a>
                 <a className="btn btnGhost" href="#performance" aria-label="View model performance">
-                  <span>Model Performance</span>
+                  <span>Model performance</span>
                 </a>
               </div>
             </div>

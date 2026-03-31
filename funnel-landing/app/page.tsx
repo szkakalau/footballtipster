@@ -6,16 +6,6 @@ import SubscribeForm from "@/components/SubscribeForm";
 export default function Home() {
   return (
     <main>
-      <div className="container">
-        <div className="topline">
-          <div className="mark">
-            <span className="markDot" />
-            <span>Independent research project</span>
-          </div>
-          <div className="pill">Weekly newsletter · experiments · tracking</div>
-        </div>
-      </div>
-
       <Hero />
 
       <Section
@@ -47,6 +37,71 @@ export default function Home() {
             After 18 months and 30k+ tracked entries, we decided to open the
             research to the public.
           </p>
+        </div>
+      </Section>
+
+      <Section
+        id="how"
+        eyebrow="Method"
+        title="How the model works (without the magic)"
+        rightSlot={
+          <div className="card">
+            <div className="cardInner">
+              <div className="sEyebrow">Reality check</div>
+              <p className="prose" style={{ marginTop: 10 }}>
+                &ldquo;AI&rdquo; here means statistical models trained on
+                historical prices and outcomes — not a random number generator.
+                We measure edge the way serious bettors sanity-check
+                themselves: against closing lines and over large samples.
+              </p>
+            </div>
+          </div>
+        }
+      >
+        <div className="card">
+          <div className="cardInner">
+            <div className="twoCol">
+              <div className="prose">
+                <p>
+                  <strong>Odds market inefficiency.</strong> Bookmakers balance
+                  books; opening prices aren&apos;t always aligned with closing
+                  consensus. We look for systematic gaps between our fair
+                  probability estimate and what the market implies before
+                  kickoff.
+                </p>
+                <p>
+                  <strong>Closing line value (CLV).</strong> If our recorded
+                  price consistently beats the closing line, that&apos;s one
+                  proxy for being on the sharp side — not a profit promise, but
+                  a quality signal.
+                </p>
+                <p>
+                  <strong>Training &amp; evaluation.</strong> Models are fit on
+                  past seasons and scored on held-out data. The headline metrics
+                  we publish come from that out-of-sample slice — not
+                  cherry-picked hot streaks.
+                </p>
+              </div>
+              <div>
+                <p className="listLead">Why this isn&apos;t random noise</p>
+                <ul className="bullets bulletsConcrete">
+                  <li>Every pick is logged before kickoff with a published price</li>
+                  <li>
+                    Settlement rules match the stated market (Asian lines,
+                    pushes, etc.)
+                  </li>
+                  <li>
+                    We track CLV and win rate together — not screenshot theatre
+                  </li>
+                </ul>
+                <div className="ctaRow" style={{ marginTop: 14 }}>
+                  <a className="btn btnPrimary" href="/picks-history">
+                    View full pick history
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -116,6 +171,25 @@ export default function Home() {
           sample="30,412"
           period="Last 18 months"
         />
+        <div className="card proofStackCard" style={{ marginTop: 14 }}>
+          <div className="cardInner">
+            <p className="listLead">Proof stack — not just numbers on a slide</p>
+            <p className="prose" style={{ marginTop: 6 }}>
+              Aggregates are easy to doubt. A dated pick log with{" "}
+              <strong>fixture, price, and settlement</strong> is what turns
+              curiosity into trust — especially in a category full of
+              anonymous tipsters.
+            </p>
+            <div className="ctaRow" style={{ marginTop: 12 }}>
+              <a className="btn btnPrimary" href="/picks-history">
+                Open pick history
+              </a>
+              <a className="btn btnGhost" href="/about">
+                Who we are
+              </a>
+            </div>
+          </div>
+        </div>
       </Section>
 
       <Section
@@ -204,17 +278,6 @@ export default function Home() {
           </div>
         </div>
       </Section>
-
-      <div className="container">
-        <div className="footer">
-          <div>
-            Independent research newsletter. For informational purposes only.
-          </div>
-          <div style={{ marginTop: 8 }}>
-            No transactions or gaming services on this site.
-          </div>
-        </div>
-      </div>
     </main>
   );
 }

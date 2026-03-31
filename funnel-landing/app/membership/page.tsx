@@ -16,15 +16,6 @@ export const metadata: Metadata = {
 export default function MembershipPage() {
   return (
     <main>
-      <div className="container">
-        <div className="topline">
-          <Link href="/" className="mark" style={{ textDecoration: "none" }}>
-            <span className="markDot" />
-            <span>← Back to home</span>
-          </Link>
-        </div>
-      </div>
-
       <section className="sectionHeroMembership">
         <div className="container">
           <div className="sEyebrow">Membership</div>
@@ -78,14 +69,6 @@ export default function MembershipPage() {
           </div>
         </div>
       </section>
-
-      <div className="container">
-        <div className="footer">
-          <div>
-            Independent research newsletter. For informational purposes only.
-          </div>
-        </div>
-      </div>
     </main>
   );
 }
