@@ -14,8 +14,7 @@ export default function ExamplePicks() {
   return (
     <div className="examplePicks">
       <p className="examplePicksLead">
-        A real example of what you&apos;ll see in the weekly email. Same
-        structure as the{" "}
+        Example from last week&apos;s email. Same structure as the{" "}
         <a href="/picks-history">public pick log</a>.
       </p>
       <div className="examplePicksGrid">
@@ -41,6 +40,10 @@ export default function ExamplePicks() {
                 <dd>
                   <ResultTag r={row.result} />
                 </dd>
+              </div>
+              <div className="examplePickNote">
+                <dt>Short note</dt>
+                <dd>&ldquo;{row.noteExcerpt}&rdquo;</dd>
               </div>
             </dl>
           </article>

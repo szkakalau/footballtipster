@@ -746,6 +746,10 @@ button, input{font:inherit}
   color: var(--ink2);
 }
 
+.examplePickNote dd{
+  color: rgba(18,17,15,.76);
+}
+
 .emailMock{
   max-width: 720px;
 }

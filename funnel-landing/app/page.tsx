@@ -1,6 +1,4 @@
-import EmailPreviewMock from "@/components/EmailPreviewMock";
 import ExamplePicks from "@/components/ExamplePicks";
-import FounderVoice from "@/components/FounderVoice";
 import Hero from "@/components/Hero";
 import PerformancePanel from "@/components/PerformancePanel";
 import Section from "@/components/Section";
@@ -10,69 +8,6 @@ export default function Home() {
   return (
     <main>
       <Hero />
-
-      <Section
-        id="examples"
-        eyebrow="Sample"
-        title="Example from a recent send"
-        rightSlot={
-          <div className="card">
-            <div className="cardInner">
-              <div className="sEyebrow">What you get</div>
-              <p className="prose" style={{ marginTop: 10 }}>
-                A quick peek at the format: fixture, published odds, closing
-                odds, and how it settled — the same fields as the{" "}
-                <a href="/picks-history" className="founderVoiceLink">
-                  full history
-                </a>
-                .
-              </p>
-            </div>
-          </div>
-        }
-      >
-        <ExamplePicks />
-      </Section>
-
-      <Section
-        id="email-preview"
-        eyebrow="Inbox"
-        title="What the emails look like"
-        rightSlot={
-          <div className="card">
-            <div className="cardInner">
-              <div className="sEyebrow">Preview</div>
-              <p className="prose" style={{ marginTop: 10 }}>
-                One email per week. Picks + short notes + a simple performance
-                snapshot — so you can scan it fast and decide if it&apos;s worth
-                your attention.
-              </p>
-            </div>
-          </div>
-        }
-      >
-        <EmailPreviewMock />
-      </Section>
-
-      <Section
-        id="founder"
-        eyebrow="People"
-        title="Founder voice — not a faceless feed"
-        rightSlot={
-          <div className="card">
-            <div className="cardInner">
-              <div className="sEyebrow">A real person</div>
-              <p className="prose" style={{ marginTop: 10 }}>
-                If you&apos;re skeptical, good. This is our stance in one
-                paragraph — and why we publish a public history instead of
-                hiding behind a brand.
-              </p>
-            </div>
-          </div>
-        }
-      >
-        <FounderVoice />
-      </Section>
 
       <Section
         id="why"
@@ -214,6 +149,25 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </Section>
+
+      <Section
+        id="last-week"
+        eyebrow="Example"
+        title="Example from last week’s email"
+        rightSlot={
+          <div className="card">
+            <div className="cardInner">
+              <div className="sEyebrow">Specific</div>
+              <p className="prose" style={{ marginTop: 10 }}>
+                Three picks, exactly as they appeared in the weekly email —
+                including closing odds and a short note excerpt.
+              </p>
+            </div>
+          </div>
+        }
+      >
+        <ExamplePicks />
       </Section>
 
       <Section

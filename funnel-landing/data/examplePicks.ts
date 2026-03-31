@@ -6,39 +6,35 @@ export type ExamplePick = {
   price: string;
   closing: string;
   result: "Win" | "Loss" | "Push";
+  noteExcerpt: string;
 };
 
 export const EXAMPLE_PICKS: ExamplePick[] = [
   {
-    fixture: "Liverpool vs Brighton",
-    modelEdge: "+6.2%",
-    pick: "Liverpool ML",
-    price: "1.83",
-    closing: "1.72",
-    result: "Win",
-  },
-  {
-    fixture: "Inter vs Atalanta",
-    modelEdge: "+3.1%",
-    pick: "Under 2.5 goals",
+    fixture: "Tottenham vs Aston Villa",
+    modelEdge: "+5.8%",
+    pick: "Tottenham ML",
     price: "1.91",
-    closing: "1.88",
+    closing: "1.78",
     result: "Win",
-  },
-  {
-    fixture: "Dortmund vs Stuttgart",
-    modelEdge: "+4.8%",
-    pick: "Both teams to score — Yes",
-    price: "1.76",
-    closing: "1.74",
-    result: "Loss",
+    noteExcerpt: "Market overpriced Villa after Europa League match…",
   },
   {
     fixture: "Real Sociedad vs Valencia",
-    modelEdge: "+2.4%",
-    pick: "Real Sociedad -0.5 Asian",
-    price: "1.98",
-    closing: "1.95",
-    result: "Push",
+    modelEdge: "+3.0%",
+    pick: "Under 2.5 goals",
+    price: "1.88",
+    closing: "1.81",
+    result: "Win",
+    noteExcerpt: "Low-tempo matchup + market leaned too hard on recent scorelines…",
+  },
+  {
+    fixture: "Inter vs Atalanta",
+    modelEdge: "+2.6%",
+    pick: "Inter -0.5 Asian",
+    price: "1.95",
+    closing: "1.87",
+    result: "Loss",
+    noteExcerpt: "We liked the price pre-kick; late injury news flipped the game state…",
   },
 ];
